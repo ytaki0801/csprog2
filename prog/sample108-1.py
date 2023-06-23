@@ -1,6 +1,6 @@
 class Date:
   def __init__(self, a=(1970, 1, 1)):
-    if   isinstance(a, Date):
+    if isinstance(a, Date):
       self.__year, self.__month, self.__day = a.__year, a.__month, a.__day
     else:
       self.__year, self.__month, self.__day = a
