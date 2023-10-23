@@ -15,7 +15,7 @@ class Car:
     else:
       print('名前が文字列ではありません')
     if isinstance(num, int) and num < 10000 and num >= 0:
-      self.__num = props[1]
+      self.__num = num
     else:
       print('ナンバーの値が不正です')
 
