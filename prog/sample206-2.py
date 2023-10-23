@@ -9,11 +9,12 @@ class Car:
     return self.__name + str(self.__num).zfill(4)
   @prop.setter
   def prop(self, props):
-    if isinstance(props[0], str):
-      self.__name = props[0]
+    name, num = props[0], props[1]
+    if isinstance(name, str):
+      self.__name = name
     else:
       print('名前が文字列ではありません')
-    if isinstance(props[1], int) and props[1] < 10000 and props[1] >= 0:
+    if isinstance(num, int) and num < 10000 and num >= 0:
       self.__num = props[1]
     else:
       print('ナンバーの値が不正です')
