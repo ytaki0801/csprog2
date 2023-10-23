@@ -7,12 +7,13 @@ class Car:
   def getProp(self):
     return self.__name + str(self.__num).zfill(4)
   def setProp(self, *props):
-    if isinstance(props[0], str):
-      self.__name = props[0]
+    name, num = props
+    if isinstance(name, str):
+      self.__name = name
     else:
       print('名前が文字列ではありません')
-    if isinstance(props[1], int) and props[1] < 10000 and props[1] >= 0:
-      self.__num = props[1]
+    if isinstance(num, int) and num < 10000 and num >= 0:
+      self.__num = num
     else:
       print('ナンバーの値が不正です')
 
